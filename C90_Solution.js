@@ -155,22 +155,19 @@ function car1_right()
 {
 
 	if(car1_x <= 700)
-
 	{
-car1_x =car1_x + 10;
-console.log("When right arrow is pressed,  x = " + car1_x +"| y=" +car1_y);
-uploadBackground();
-uploadcar1();
-uploadcar2();
+		car1_x =car1_x + 10;
+		console.log("When right arrow is pressed,  x = " + car1_x +"| y=" +car1_y);
+		uploadBackground();
+		uploadcar1();
+		uploadcar2();
 
 	}
 
+	if(car1_x > 700)
+	{
+		console.log("car1 Won");
+		document.getElementById('game_status').innerHTML = "Car 1 Won!!";
+	}
+
 }
-
-if(car1_x > 700)
-{
-console.log("car1 Won");
-document.getElementById('game_status').innerHTML = "Car 1 Won!!";
-
-}
-
